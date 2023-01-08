@@ -4,9 +4,10 @@ using namespace std;
 
 int main()
 {
-    
-    int array[]={1,2,5,9};
-    LinearSearch(array, 4, 19);
+    int n;
+    cin>>n;
+    palindrome(n);
 
     return 0;
 }
+

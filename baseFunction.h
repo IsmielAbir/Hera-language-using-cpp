@@ -58,9 +58,104 @@ template <typename t> void LinearSearch(t a[],t n,t m){
     cout<<"Not Found"<<endl;
 }
 //8 Binary Search
-
-
-
-
+int BinarySearch(int a[], int l, int r, int n){
+    while(l<=r){
+        int mid = l+(r-l)/2;
+        if(a[mid]==n)
+        return mid;
+        else if(a[mid]<n)
+        l = mid +1;
+        else
+        r= mid -1;
+    }
+    return -1;
+}
+//9 ternary search
+int TernarySearch(int ar[],int l, int r, int key){
+    while (r >= l) {
+        int mid1 = l + (r - l) / 3;
+        int mid2 = r - (r - l) / 3;
+            if (ar[mid1] == key) {
+            return mid1;
+        }
+        if (ar[mid2] == key) {
+            return mid2;
+        }
+        if (key < ar[mid1]) {
+            r = mid1 - 1;
+        }
+        else if (key > ar[mid2]) {
+            l = mid2 + 1;
+        }
+        else {
+            l = mid1 + 1;
+            r = mid2 - 1;
+        }
+    }
+    return -1;
+}
+//10 selection sort
+void selectionSort(int a[], int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[i])
+            swap(a[j],a[i]);
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+}
+//11 bubble sort
+void bubbleSort(int a[], int n){
+    int c=1;
+    while(c<n-1){
+        for(int i=0;i<n-c;i++){
+            if(a[i]>a[i+1])
+            swap(a[i], a[i+1]);
+        }
+        c++;
+    }
+    for(int i=0;i<n;i++)
+    cout<<a[i]<<" ";
+}
+//12 insertion sort
+void insertionSort(int a[], int n){
+    for(int i=1;i<n;i++){
+        int c=a[i];
+        int j=i-1;
+        while(j>=0 && a[j]>c){
+            a[j+1]=a[j];
+            j--;
+        }
+        a[j+1]=c;
+    }
+    for(int i=0;i<n;i++)
+    cout<<a[i]<<" ";
+}
+//13 possible sub array of the following
+void subArray(int a[], int n){
+   for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            for(int k=i;k<=j;k++){
+                cout<<a[k]<<" ";
+            }
+            cout<<endl;
+        }
+    }
+}
+//14 palindrome
+template<typename N>void stringPalindrome(N n){
+    int c=0;
+    for(int i=0;i<n.size();i++){
+        if(n[i]!=n[n.size()-1-i])
+        c=1;
+    }
+    if(c==0)
+    cout<<"Palindrome"<<endl;
+    else
+    cout<<"Not Palindrome"<<endl;
+}
+//15 
 
 

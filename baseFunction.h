@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 //1. maximun
 template <typename t> void maximum(t a, t b){
@@ -156,6 +156,31 @@ template<typename N>void stringPalindrome(N n){
     else
     cout<<"Not Palindrome"<<endl;
 }
-//15 
+//15 lower to upper
+void lowerToUpper(string s){
+    transform(s.begin(), s.end(), s.begin(), ::toupper);
+    cout<<s<<endl;
+}
+//16 upper to lower
+void upperToLower(string s){
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+    cout<<s<<endl;
+}
+//17 sieve algorithm
+void sievePrime(int n){
+    int prime[1000]={};
+    for(int i=2;i<=n;i++){
+        if(prime[i]==0){
+            for(int j=i*i;j<=n;j+=i){
+                prime[j]=1;
+            }
+        }
+    }
+    for(int i=2;i<=n;i++){
+        if(prime[i]==0)
+        cout<<i<<" ";
+    }
+}
+//18
 
 

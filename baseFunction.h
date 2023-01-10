@@ -193,4 +193,12 @@ template<typename T, typename... Args>void hera(T value, Args... args) {
     std::cout << value;
     hera(args...);
 }
+//20 input function
+template<typename N>void zeus(N& a){
+    cin>>a;
+}
+template<typename N, typename... args> void zeus(N& b, args&... c){
+    cin>>b;
+    zeus(c...);
+}
 

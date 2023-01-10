@@ -1,12 +1,11 @@
 #include "baseFunction.h"
-using namespace std;
 
 int main()
 {
-    int a,b,c,d;
-    cin>>a>>b>>c>>d;
-    hera(a,b,c,d);
+    int a,b,c;
+    zeus(a,b,c);
+    int d = a*b*c;
+    hera(d);
 
     return 0;
 }
-

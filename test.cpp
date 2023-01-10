@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n;
-    sievePrime(n);
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    hera(a,b,c,d);
 
     return 0;
 }

@@ -181,6 +181,16 @@ void sievePrime(int n){
         cout<<i<<" ";
     }
 }
-//18
-
+//18 gcd
+void gcd(int a, int b){
+    cout<<__gcd(a,b);
+}
+//19 print function 
+template<typename T>void hera(T value) {
+    std::cout << value;
+}
+template<typename T, typename... Args>void hera(T value, Args... args) {
+    std::cout << value;
+    hera(args...);
+}
 

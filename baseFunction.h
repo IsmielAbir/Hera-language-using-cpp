@@ -201,4 +201,9 @@ template<typename N, typename... args> void zeus(N& b, args&... c){
     cin>>b;
     zeus(c...);
 }
-
+//21 fibonacci
+int fibonacci(int n){
+    if(n==0 || n==1)
+    return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+}

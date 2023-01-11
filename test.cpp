@@ -2,10 +2,9 @@
 
 int main()
 {
-    int a,b,c;
-    zeus(a,b,c);
-    int d = a*b*c;
-    hera(d);
+    int n;
+    zeus(n);
+    hera(fibonacci(n));
 
     return 0;
 }

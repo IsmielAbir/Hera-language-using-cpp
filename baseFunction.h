@@ -207,3 +207,18 @@ int fibonacci(int n){
     return n;
     return fibonacci(n-1) + fibonacci(n-2);
 }
+//22 print all number in decreasing order
+void decrease(int n){
+    if(n==0)
+    return;
+    cout<<n<<" ";
+    decrease(n-1);
+}
+//23 print all number in increasing order
+void increase(int n){
+    if(n==0)
+    return;
+    increase(n-1);
+    cout<<n<<" ";
+}
+//24

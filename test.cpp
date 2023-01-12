@@ -4,7 +4,7 @@ int main()
 {
     int n;
     zeus(n);
-    hera(fibonacci(n));
+    increase(n);
 
     return 0;
 }

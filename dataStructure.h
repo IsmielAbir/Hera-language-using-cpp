@@ -14,7 +14,7 @@ class LinkedList{
 
    
 
-void insertAthead(Node *&head, int val){
+void insertAtHead(Node *&head, int val){
         Node *newNode = new Node(val);
         newNode->Next=head;
         head=newNode;

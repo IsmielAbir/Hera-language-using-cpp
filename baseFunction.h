@@ -221,4 +221,34 @@ void increase(int n){
     increase(n-1);
     cout<<n<<" ";
 }
-//24
+//24 tower of hanoi
+void towerOfHanoi(int n, char src, char dest, char helper){
+    if(n==0) return;
+    towerOfHanoi(n-1, src, helper, dest);
+    cout<<"Move from "<<src<<" to "<<dest<<endl;
+    towerOfHanoi(n-1, dest, helper, src);
+}
+//25 remove duplicate from string
+string removeDuplicate(string s){
+    if(s.size()==0)
+    return "";
+    char ch=s[0];
+    string ans = removeDuplicate(s.substr(1));
+    if(ch==ans[0]){
+        return ans;
+    }
+    return ch+ans;
+}
+//26 permutation
+void permutation(string s, string ans){
+    if(s.size()==0){
+        cout<<ans<<endl;
+        return;
+    }
+    for(int i=0;i<s.size();i++){
+        char ch=s[i];
+        string r = s.substr(0,i)+s.substr(i+1);
+        permutation(r,ans+ch);
+    }
+}
+//27 

@@ -2,9 +2,7 @@
 
 int main()
 {
-    int n;
-    zeus(n);
-    increase(n);
+    permutation("abc","");
 
     return 0;
 }

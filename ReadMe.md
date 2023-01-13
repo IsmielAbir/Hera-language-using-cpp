@@ -1,1 +1,1 @@
-This is my own programming language c++.
+This is my own programming language based on c++. 

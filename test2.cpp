@@ -1,14 +1,22 @@
-#include "dataStructure.h"
+#include "DataStructure/StackQueue.h"
 
 
 int main()
 {
-    LinkedList a;
-    Node *head=NULL;
-    a.insertAtHead(head, 50);
-    a.insertAtHead(head, 60);
+    Stack <int> st;
+    st.push(10);
+    st.push(20);
+    st.push(30);
+    st.push(40);
+    while(!st.empty()){
+        cout<<st.pop()<<endl;
 
-    a.insertAtAnyPosition(head, 2, 55);
-    a.display(head);
+    }
+
+    cout<<st.size()<<endl;
+    if(!st.empty())
+    cout<<st.Top()<<endl;
+
+
     return 0;
 }

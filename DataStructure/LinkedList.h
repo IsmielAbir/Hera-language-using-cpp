@@ -132,13 +132,13 @@ void deleteByValue(Node *&head, int value){
     deletionAtSpecificPosition(head, position);
 }
 
-Node *reverseRecursive(Node *&head){
+Node *reverse(Node *&head){
     if(head==NULL || head->Next==NULL){
         if(head==NULL)
         cout<<"The linked list is empty"<<endl;
         return head;
     }
-    Node *newHead = reverseRecursive(head->Next);
+    Node *newHead = reverse(head->Next);
     head->Next->Next=head;
     head->Next=NULL;
     return newHead;
@@ -164,4 +164,80 @@ void display(Node *n){
         }
         cout<<endl;
     }
+};
+
+
+// doubly linkedlist
+class doublyNode{
+    public:
+    int value;
+    doublyNode *next;
+    doublyNode *prev;
+    
+    doublyNode(int val){
+        value=val;
+        prev = NULL;
+        next =NULL;
+    }
+};
+
+class DoublyLinkedList{
+    public:
+
+void insertAtTail(doublyNode *&head, int val){
+    doublyNode *newNode = new doublyNode(val);
+    if(head==NULL){
+        head=newNode;
+        return;
+    }
+    doublyNode *temp=head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+        
+    }
+    temp->next=newNode;
+    newNode->prev=temp;
+}
+
+void insertAtHead(doublyNode *&head, int val){
+    doublyNode *newNode = new doublyNode(val);
+    head->prev=newNode;
+    newNode->next=head;
+    head=newNode;
+}
+
+void display(doublyNode *n){
+    while(n!=NULL){
+        cout<<n->value;
+        if(n->next!=NULL)
+        cout<<" -> ";
+        n=n->next;
+    }
+    cout<<endl;
+}
+
+void displayReverse(doublyNode *&head){
+    doublyNode *temp=head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    while(temp!=NULL){
+        cout<<temp->value;
+        if(temp->prev!=NULL)
+        cout<<" -> ";
+        temp=temp->prev;
+    }
+    cout<<endl;
+}
+
+int countLength(doublyNode *&head){
+    int count = 0 ;
+    doublyNode *temp=head;
+    while(temp!=NULL){
+        temp=temp->next;
+        count++;
+    }
+    return count;
+}
+
 };

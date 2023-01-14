@@ -1,22 +1,18 @@
-#include "DataStructure/StackQueue.h"
+#include "Algorithm/Algorithm.h"
 
+#include "baseFunction.h"
 
 int main()
 {
-    Stack <int> st;
-    st.push(10);
-    st.push(20);
-    st.push(30);
-    st.push(40);
-    while(!st.empty()){
-        cout<<st.pop()<<endl;
-
+    
+    int v,e,source=0;
+    cin>>v>>e;
+    for(int i=0;i<e;i++){
+        int u,v;
+        cin>>u>>v;
+        adj_list[u].push_back(v);
+        adj_list[v].push_back(u);
     }
-
-    cout<<st.size()<<endl;
-    if(!st.empty())
-    cout<<st.Top()<<endl;
-
-
+    DFS(source);
     return 0;
 }

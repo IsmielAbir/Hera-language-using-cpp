@@ -1,5 +1,4 @@
 #include "Algorithm/Algorithm.h"
-
 #include "baseFunction.h"
 
 int main()
@@ -13,6 +12,6 @@ int main()
         adj_list[u].push_back(v);
         adj_list[v].push_back(u);
     }
-    DFS(source);
+    BFS(source);
     return 0;
 }

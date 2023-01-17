@@ -27,7 +27,7 @@ template <typename t> void prime(t a){
     cout<<"Number is not prime"<<endl;
 }
 //5 reverse a number
-template <typename t> void reverse(t n){
+template <typename t> void reverseNum(t n){
     t r,a=0;
     while(n>0){
     r = n%10;
@@ -251,4 +251,8 @@ void permutation(string s, string ans){
         permutation(r,ans+ch);
     }
 }
-//27 
+//27 remove duplicate from array
+int removeDuplicates(vector<int>& nums) {
+       nums.erase(unique(nums.begin(), nums.end()), nums.end());
+       return nums.size();
+    }
